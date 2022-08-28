@@ -1,0 +1,13 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": [
+		"javascript"
+	],
+	"javascript.format.enable": false,
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"editor.tabSize": 2,
+}
