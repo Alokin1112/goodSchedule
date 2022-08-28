@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title *ngIf="dsTitle">
+    {{ dsTitle }}
+  </mat-card-title>
+  
+  <mat-card-subtitle *ngIf="dsSubtitle">
+    {{ dsSubtitle }}
+  </mat-card-subtitle>
+
+  <ng-content></ng-content>
+
+  <mat-card-actions>
+    <ng-content select=".card-actions">
+    </ng-content>
+  </mat-card-actions>
+</mat-card>
