@@ -5,12 +5,24 @@ import { HomeComponent } from '@pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: RoutesPath.DASHBOARD,
+        loadChildren: () => import('@pages/dashboard/dashboard.module').then(m => m.DashboardModule),
+      },
+      {
+        path: RoutesPath.SCHEDULE,
+        loadChildren: () => import('@pages/schedule-setter/schedule-setter.module').then(m => m.ScheduleSetterModule),
+      },
+    ]
   },
   {
-    path: RoutesPath.SCHEDULE,
-    loadChildren: () => import('@pages/schedule-setter/schedule-setter.module').then(m => m.ScheduleSetterModule),
-  },
+    path: '**',
+    redirectTo: RoutesPath.DASHBOARD,
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
