@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.wrapper {
+  height: 200px;
+  width: fit-content;
+  min-width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: var(--gap);
+}
+
+.card {
+  width: 300px;
+}

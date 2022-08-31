@@ -13,11 +13,7 @@ $accent: #0be881;
 html,
 body {
     width: 100vw;
-    overflow: hidden;
-    height: 100%;
-}
-
-body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
 }
