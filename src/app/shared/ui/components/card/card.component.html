@@ -1,16 +1,14 @@
-<div class="card">
-  <h2 *ngIf="dsTitle">
-    {{ dsTitle }}
-  </h2>
+<h2 *ngIf="dsTitle">
+  {{ dsTitle }}
+</h2>
 
-  <h4 *ngIf="dsSubtitle">
-    {{ dsSubtitle }}
-  </h4>
+<h4 *ngIf="dsSubtitle">
+  {{ dsSubtitle }}
+</h4>
 
-  <ng-content></ng-content>
+<ng-content></ng-content>
 
-  <div>
-    <ng-content select=".card-actions">
-    </ng-content>
-  </div>
+<div>
+  <ng-content select=".card-actions">
+  </ng-content>
 </div>

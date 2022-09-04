@@ -1,13 +1,21 @@
 :host {
   width: 100%;
+  height: 100%;
+}
+
+.card__host {
+  height: 100%;
+  width: 100%;
   overflow-x: scroll;
 }
+
+$wrapper__margin: calc(var(--gap) / 2);
 
 .wrapper {
   height: 200px;
   width: fit-content;
-  min-width: 100%;
-  background-color: blue;
+  min-width: calc(100% - 2*$wrapper__margin);
+  margin: $wrapper__margin;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
