@@ -20,8 +20,8 @@ $wrapper__margin: calc(var(--gap) / 2);
   flex-direction: row;
   justify-content: flex-start;
   column-gap: var(--gap);
-}
 
-.card {
-  width: 300px;
+  &>* {
+    width: 300px;
+  }
 }

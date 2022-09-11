@@ -6,18 +6,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { SubjectsListComponent } from '@modules/schedule-setter-modules/components/subjects-list/subjects-list.component';
 import { SubjectItemComponent } from '@modules/schedule-setter-modules/components/subject-item/subject-item.component';
 import { SubjectAddComponent } from '@modules/schedule-setter-modules/components/subject-add/subject-add.component';
+import { SubjectAddDialogComponent } from '@modules/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     SubjectsListComponent,
     SubjectItemComponent,
-    SubjectAddComponent
+    SubjectAddComponent,
+    SubjectAddDialogComponent
   ],
   imports: [
     CommonModule,
     UiModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
   ],
   exports: [
     SubjectsListComponent

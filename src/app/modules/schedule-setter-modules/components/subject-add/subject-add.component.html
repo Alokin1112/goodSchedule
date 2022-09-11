@@ -1,9 +1,11 @@
-<ds-card>
-  <div class="body">
-    <button class="add__button" mat-button>
+<ds-card class="card">
+    <button 
+      class="add__button" 
+      mat-button
+      (click)="openDialog()"
+    >
       <mat-icon class="add__icon">
         add
       </mat-icon>
     </button>
-  </div>
 </ds-card>
