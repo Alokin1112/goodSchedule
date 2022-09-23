@@ -1,0 +1,32 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="handleLogin()"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      formControlName="username"
+      type="text"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      type="password"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button>
+    Submit
+  </button>
+</form>

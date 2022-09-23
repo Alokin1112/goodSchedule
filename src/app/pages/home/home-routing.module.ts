@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RoutesPath } from '@core/constants/RoutesPath.const';
+import { RoutesPath } from '@core/enums/routes-path.enum';
 import { HomeComponent } from '@pages/home/home.component';
 
 const routes: Routes = [
