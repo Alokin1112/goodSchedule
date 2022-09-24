@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RoutesPath } from '@core/enums/routes-path.enum';
+import { AuthorizationGuardGuard } from '@core/guards/authorization-guard.guard';
 const routes: Routes = [
   {
     path: RoutesPath.HOME,
     loadChildren: () => import('@pages/home/home.module').then(m => m.HomeModule),
+    canActivate: [AuthorizationGuardGuard],
+    canLoad: [AuthorizationGuardGuard],
   },
   {
     path: RoutesPath.AUTH,

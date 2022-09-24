@@ -4,6 +4,7 @@ import { KeyStorage } from '@core/enums/key-storage.enum';
 import { Router } from '@angular/router';
 import { RoutesPath } from '@core/enums/routes-path.enum';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { isEmpty } from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class UserService {
   }
 
   isAuthenticated(): boolean {
-    return !!this.getUserToken();
+    return !isEmpty(this.getUserToken());
   }
 
   logout(): void {

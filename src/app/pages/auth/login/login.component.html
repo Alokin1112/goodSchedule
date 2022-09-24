@@ -1,6 +1,7 @@
 <form
   [formGroup]="form"
   (ngSubmit)="handleLogin()"
+  class="login__form"
 >
   <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
@@ -26,7 +27,10 @@
     </mat-error>
   </mat-form-field>
 
-  <button mat-raised-button>
+  <button
+    mat-raised-button
+    [disabled]="form.invalid"
+  >
     Submit
   </button>
 </form>
