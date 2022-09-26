@@ -3,6 +3,8 @@
 ds-login {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +52,7 @@ ds-login {
     background-color: var(--accent);
     z-index: -1;
     border-radius: 100%;
+    overflow: hidden;
 
     @media screen and(min-width:$screen-md-min) {
       top: -25%;
