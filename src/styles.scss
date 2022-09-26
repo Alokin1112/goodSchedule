@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --gap: 20px;
+    --primary: #485460;
+    --accent: #0be881;
+    --white: white;
 }
 
 * {
@@ -9,6 +12,7 @@
 
 $primary: #485460;
 $accent: #0be881;
+$white: white;
 
 html,
 body {

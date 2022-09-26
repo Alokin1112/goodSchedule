@@ -48,6 +48,11 @@
               "src/styles.scss",
               "src/styles/breakpoints.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

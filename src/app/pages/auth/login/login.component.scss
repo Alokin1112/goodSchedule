@@ -1,14 +1,58 @@
-:host {
-  width: 100%;
-  height: 100%;
+@import 'breakpoints';
+
+ds-login {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-}
 
-.login__form {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--gap) / 2);
+  .card {
+    display: flex;
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    background-color: var(--white);
+
+    @media screen and(min-width:$screen-md-min) {
+      width: 30%;
+      max-width: 400px;
+    }
+  }
+
+  .login__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 2);
+  }
+
+  .mat-button-wrapper {
+    color: var(--white);
+
+  }
+
+  .mat-button-disabled {
+    & .mat-button-wrapper {
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+
+  .layout {
+    position: absolute;
+    top: -20%;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background-color: var(--accent);
+    z-index: -1;
+    border-radius: 100%;
+
+    @media screen and(min-width:$screen-md-min) {
+      top: -25%;
+    }
+  }
 }

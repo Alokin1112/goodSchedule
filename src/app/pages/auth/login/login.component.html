@@ -1,36 +1,42 @@
-<form
-  [formGroup]="form"
-  (ngSubmit)="handleLogin()"
-  class="login__form"
->
-  <mat-form-field appearance="outline">
-    <mat-label>Name</mat-label>
-    <input
-      matInput
-      formControlName="username"
-      type="text"
-    >
-    <mat-error>
-      Required
-    </mat-error>
-  </mat-form-field>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input
-      matInput
-      formControlName="password"
-      type="password"
-    >
-    <mat-error>
-      Required
-    </mat-error>
-  </mat-form-field>
-
-  <button
-    mat-raised-button
-    [disabled]="form.invalid"
+<ds-card class="card">
+  <h1>Login</h1>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="handleLogin()"
+    class="login__form"
   >
-    Submit
-  </button>
-</form>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="username"
+        type="text"
+      >
+      <mat-error>
+        Required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        type="password"
+      >
+      <mat-error>
+        Required
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      [disabled]="form.invalid"
+      color="primary"
+      style="submit__button"
+    >
+      Submit
+    </button>
+  </form>
+</ds-card>
+<span class="layout"></span>
