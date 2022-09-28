@@ -21,7 +21,7 @@ export class AuthService {
   }
 
   login(loginData: AuthenticationUserLoginData): Observable<AuthenticationResponse> {
-    return this.http.post<AuthenticationResponse>(`${environment.httpBackend}${Api.SIGNUP}`, loginData).pipe(
+    return this.http.post<AuthenticationResponse>(`${environment.httpBackend}${Api.AUTHENTICATE}`, loginData).pipe(
       catchError(() => of({ token: "" })),
     )
   }
