@@ -7,6 +7,11 @@ import { HomeComponent } from '@pages/home/home.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: RoutesPath.DASHBOARD,
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: HomeComponent,
     children: [
       {
@@ -23,11 +28,6 @@ const routes: Routes = [
       },
     ]
   },
-  {
-    path: '**',
-    redirectTo: RoutesPath.DASHBOARD,
-    pathMatch: 'full'
-  }
 ];
 
 @NgModule({

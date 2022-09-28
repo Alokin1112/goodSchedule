@@ -3,6 +3,20 @@
   <span>
     website overlay
   </span>
+
+  <span class="spacer">
+  </span>
+
+  <button
+    mat-icon-button
+    type="button"
+    (click)="handleLogout()"
+  >
+    <mat-icon>
+      logout
+    </mat-icon>
+  </button>
+
 </mat-toolbar>
 <div class="body">
   <router-outlet></router-outlet>
