@@ -2,10 +2,13 @@ export interface AuthenticationUserRegisterData {
   user: {
     username: string,
     password: string,
+    password_confirmation: string,
   }
 }
 
 export interface AuthenticationUserLoginData {
-  username: string,
-  password: string,
+  user: {
+    username: string,
+    password: string,
+  }
 }

@@ -1,23 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --gap: 20px;
-    --primary: #485460;
-    --accent: #0be881;
-    --white: white;
+	--gap: 20px;
+	--primary: #485460;
+	--accent: #0be881;
+	--white: white;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 $primary: #485460;
 $accent: #0be881;
 $white: white;
+$red: #ff6961;
+$success: $accent;
+
 
 html,
 body {
-    width: 100vw;
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    overflow-x: hidden;
+	width: 100vw;
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	overflow-x: hidden;
+}
+
+.snackbar-failure {
+	background-color: $red;
+	color: $white;
+}
+
+.snackbar-success {
+	background-color: $accent;
+	color: $white;
 }

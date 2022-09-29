@@ -1,0 +1,17 @@
+@import 'breakpoints';
+
+:host {
+  position: absolute;
+  top: -20%;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background-color: var(--accent);
+  z-index: -1;
+  border-radius: 100%;
+  overflow: hidden;
+
+  @media screen and(min-width:$screen-md-min) {
+    top: -25%;
+  }
+}

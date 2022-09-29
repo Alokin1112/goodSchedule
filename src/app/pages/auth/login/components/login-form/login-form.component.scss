@@ -1,0 +1,34 @@
+ds-login-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .login__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 2);
+  }
+
+  .mat-button-wrapper {
+    color: var(--white);
+  }
+
+  .mat-icon {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  .submit__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 2em;
+  }
+
+  .mat-button-disabled {
+    & .mat-button-wrapper {
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+}

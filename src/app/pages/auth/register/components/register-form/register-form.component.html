@@ -1,0 +1,50 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="handleLogin()"
+  class="register__form"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      formControlName="username"
+      type="text"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      type="password"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Confirm password</mat-label>
+    <input
+      matInput
+      formControlName="password_confirmation"
+      type="password"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    [disabled]="form.invalid || isLoading"
+    color="primary"
+    style="submit__button"
+  >
+    {{ isLoading ? 'Loading' : 'Register' }}
+  </button>
+</form>

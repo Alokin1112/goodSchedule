@@ -1,0 +1,53 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="handleLogin()"
+  class="login__form"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      formControlName="username"
+      type="text"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      formControlName="password"
+      [type]="isPasswordVisible ? 'text' : 'password'"
+    >
+    <button
+      matSuffix
+      mat-icon-button
+      type="button"
+      (click)="changePasswordVisibility()"
+    >
+      <mat-icon>
+        {{ isPasswordVisible ? 'visibility' : 'visibility_off' }}
+      </mat-icon>
+    </button>
+
+    <mat-error>
+      Required, min length 8
+    </mat-error>
+  </mat-form-field>
+
+  <a [routerLink]="routeToRegister">
+    Nie masz konta? Zarejestruj się
+  </a>
+
+  <button
+    mat-raised-button
+    [disabled]="form.invalid || isLoading"
+    color="primary"
+    style="submit__button"
+  >
+    {{ isLoading ? 'Loading' : 'Login' }}
+  </button>
+</form>

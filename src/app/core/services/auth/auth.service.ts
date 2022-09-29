@@ -13,10 +13,9 @@ export class AuthService {
     private http: HttpClient,
   ) { }
 
-  register(registerData: AuthenticationUserRegisterData): Observable<boolean> {
-    return this.http.post<unknown>(`${environment.httpBackend}${Api.SIGNUP}`, registerData).pipe(
-      map(() => true),
-      catchError(() => of(false)),
+  register(registerData: AuthenticationUserRegisterData): Observable<AuthenticationResponse> {
+    return this.http.post<AuthenticationResponse>(`${environment.httpBackend}${Api.SIGNUP}`, registerData).pipe(
+      catchError(() => of({ token: "" })),
     )
   }
 
