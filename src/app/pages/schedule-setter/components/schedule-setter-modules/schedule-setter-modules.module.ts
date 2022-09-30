@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { UiModule } from '@shared/ui/ui.module';
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
-import { SubjectsListComponent } from '@modules/schedule-setter-modules/components/subjects-list/subjects-list.component';
-import { SubjectItemComponent } from '@modules/schedule-setter-modules/components/subject-item/subject-item.component';
-import { SubjectAddComponent } from '@modules/schedule-setter-modules/components/subject-add/subject-add.component';
-import { SubjectAddDialogComponent } from '@modules/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
+import { SubjectsListComponent } from '@pages/schedule-setter/components/schedule-setter-modules/components/subjects-list/subjects-list.component';
+import { SubjectItemComponent } from '@pages/schedule-setter/components/schedule-setter-modules/components/subject-item/subject-item.component';
+import { SubjectAddComponent } from '@pages/schedule-setter/components/schedule-setter-modules/components/subject-add/subject-add.component';
+import { SubjectAddDialogComponent } from '@pages/schedule-setter/components/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({

@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RoutesPath } from '@core/enums/routes-path.enum';
 import { AuthenticationUserLoginData, AuthenticationUserRegisterData } from '@core/interfaces/authentication-user-data.interface';
 import { AuthService } from '@core/services/auth/auth.service';
 import { UserService } from '@core/services/auth/user.service';
-import { map, Subject, takeUntil } from 'rxjs';
+import { map, Subject, takeUntil, tap } from 'rxjs';
 
 @Component({
   selector: 'ds-login-form',
@@ -23,6 +23,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   onDestroy$ = new Subject<void>();
 
   constructor(
+    private activatedRouter: ActivatedRoute,
     private authService: AuthService,
     private fb: FormBuilder,
     private userService: UserService,
@@ -59,7 +60,10 @@ export class LoginFormComponent implements OnInit, OnDestroy {
 
   private handleSuccessLogin(token: string) {
     this.userService.setUserToken(token);
-    this.router.navigateByUrl(`${RoutesPath.HOME}`);
+    this.activatedRouter.queryParams.pipe(
+      map((res) => res['redirect'] ? res['redirect'] : `${RoutesPath.HOME}`),
+      takeUntil(this.onDestroy$),
+    ).subscribe((res) => this.router.navigateByUrl(res));
   }
 
   private handleFailureLogin() {

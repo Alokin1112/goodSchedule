@@ -1,5 +1,6 @@
 export enum Api {
-  AUTHENTICATE = '/api/v1/authenticate',
-  SIGNUP = '/api/v1/signup',
+  LOGIN = '/api/v1/login',
+  REGISTER = '/api/v1/register',
+  LOGOUT = '/api/v1/logout',
   PLANS = '/api/v1/plans'
 }

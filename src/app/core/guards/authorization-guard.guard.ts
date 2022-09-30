@@ -14,9 +14,10 @@ export class AuthorizationGuardGuard implements CanActivate, CanLoad {
     private userService: UserService,
   ) { }
   canLoad(route: Route, segments: UrlSegment[]): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    const url = segments.map((segment) => segment.path).join("/");
     if (this.userService.isAuthenticated())
       return true;
-    return this.router.createUrlTree([RoutesPath.AUTH]);
+    return this.router.navigate([`${RoutesPath.AUTH}/${RoutesPath.LOGIN}`], { queryParams: { redirect: url } });
   }
 
   canActivate(

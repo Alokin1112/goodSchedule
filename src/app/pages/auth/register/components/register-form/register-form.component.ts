@@ -6,6 +6,7 @@ import { RoutesPath } from '@core/enums/routes-path.enum';
 import { AuthenticationUserLoginData, AuthenticationUserRegisterData } from '@core/interfaces/authentication-user-data.interface';
 import { AuthService } from '@core/services/auth/auth.service';
 import { UserService } from '@core/services/auth/user.service';
+import { ConfirmedValidator } from '@core/validators/confirm-password.validator';
 import { map, Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -34,7 +35,9 @@ export class RegisterFormComponent implements OnInit, OnDestroy {
       username: [null, [Validators.required]],
       password: [null, [Validators.required, Validators.minLength(8)]],
       password_confirmation: [null, [Validators.required, Validators.minLength(8)]],
-    },);
+    }, {
+      validator: ConfirmedValidator('password', 'password_confirmation')
+    });
   }
 
   ngOnDestroy(): void {
