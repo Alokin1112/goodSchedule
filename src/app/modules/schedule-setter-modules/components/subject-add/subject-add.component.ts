@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SubjectAddDialogComponent } from '@pages/schedule-setter/components/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
+import { SubjectAddDialogComponent } from '@modules/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
 import { filter, Subject, takeUntil } from 'rxjs';
 
 @Component({
