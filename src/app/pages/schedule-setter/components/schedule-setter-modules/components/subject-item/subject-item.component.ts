@@ -11,5 +11,4 @@ export class SubjectItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
