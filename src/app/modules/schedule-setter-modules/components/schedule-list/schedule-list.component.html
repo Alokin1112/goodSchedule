@@ -1,0 +1,14 @@
+<ds-card
+  class="card__host"
+  dsTitle="Subjects"
+>
+  <div class="wrapper">
+    <ds-schedule-item
+      *ngFor="let schedule of schedules;let i=index"
+      [dsSchedule]="schedule"
+      (dsDeleteSchedule)="deleteSchedule(i)"
+    >
+    </ds-schedule-item>
+    <ds-schedule-add (dsAddSchedule)="addNewSchedule($event)"></ds-schedule-add>
+  </div>
+</ds-card>

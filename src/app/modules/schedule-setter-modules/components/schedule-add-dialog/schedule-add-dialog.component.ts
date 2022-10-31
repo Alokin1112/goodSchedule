@@ -5,16 +5,16 @@ import { ScheduleForm } from '@modules/schedule-setter-modules/interfaces/schedu
 import { SubjetFormCreatorService } from '@modules/schedule-setter-modules/services/subjet-form-creator.service';
 
 @Component({
-  selector: 'ds-subject-add-dialog',
-  templateUrl: './subject-add-dialog.component.html',
-  styleUrls: ['./subject-add-dialog.component.scss']
+  selector: 'ds-schedule-add-dialog',
+  templateUrl: './schedule-add-dialog.component.html',
+  styleUrls: ['./schedule-add-dialog.component.scss']
 })
-export class SubjectAddDialogComponent implements OnInit {
+export class ScheduleAddDialogComponent implements OnInit {
 
   form: FormGroup;
 
   constructor(
-    public dialogRef: MatDialogRef<SubjectAddDialogComponent>,
+    public dialogRef: MatDialogRef<ScheduleAddDialogComponent>,
     private subjetFormCreatorService: SubjetFormCreatorService,
     @Inject(MAT_DIALOG_DATA) private dataForm: ScheduleForm,
   ) { }
@@ -25,10 +25,13 @@ export class SubjectAddDialogComponent implements OnInit {
   }
 
   onAddClose() {
-    this.dialogRef.close(true);
+    const formResult = this.form.value;
+    this.form.reset();
+    this.dialogRef.close(formResult);
   }
+
   onCancelClose() {
-    this.dialogRef.close();
+    this.dialogRef.close(null);
   }
 
 }

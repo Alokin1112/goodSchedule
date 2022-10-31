@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { UiModule } from '@shared/ui/ui.module';
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
-import { SubjectsListComponent } from '@modules/schedule-setter-modules/components/subjects-list/subjects-list.component';
-import { SubjectItemComponent } from '@modules/schedule-setter-modules/components/subject-item/subject-item.component';
-import { SubjectAddComponent } from '@modules/schedule-setter-modules/components/subject-add/subject-add.component';
-import { SubjectAddDialogComponent } from '@modules/schedule-setter-modules/components/subject-add-dialog/subject-add-dialog.component';
+import { ScheduleListComponent } from '@modules/schedule-setter-modules/components/schedule-list/schedule-list.component';
+import { ScheduleItemComponent } from '@modules/schedule-setter-modules/components/schedule-item/schedule-item.component';
+import { ScheduleAddComponent } from '@modules/schedule-setter-modules/components/schedule-add/schedule-add.component';
+import { ScheduleAddDialogComponent } from '@modules/schedule-setter-modules/components/schedule-add-dialog/schedule-add-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -15,10 +15,10 @@ import { SubjetFormCreatorService } from '@modules/schedule-setter-modules/servi
 
 @NgModule({
   declarations: [
-    SubjectsListComponent,
-    SubjectItemComponent,
-    SubjectAddComponent,
-    SubjectAddDialogComponent
+    ScheduleListComponent,
+    ScheduleItemComponent,
+    ScheduleAddComponent,
+    ScheduleAddDialogComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { SubjetFormCreatorService } from '@modules/schedule-setter-modules/servi
     MatFormFieldModule,
   ],
   exports: [
-    SubjectsListComponent,
+    ScheduleListComponent,
   ],
   providers: [
     SubjetFormCreatorService

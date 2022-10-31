@@ -3,7 +3,8 @@ import { Subject } from '@modules/schedule-setter-modules/interfaces/subject.int
 export interface Schedule {
   id: string;
   name: string;
-  subjects: Subject[];
+  color: string;
+  subjects?: Subject[];
 }
 
 export type ScheduleForm = Omit<Schedule, "subjects">
