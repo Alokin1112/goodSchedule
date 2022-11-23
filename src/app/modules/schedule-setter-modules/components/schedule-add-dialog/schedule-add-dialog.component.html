@@ -7,11 +7,23 @@
 >
 
   <mat-form-field appearance="fill">
-    <mat-label>Name</mat-label>
+    <mat-label>Title</mat-label>
     <input
       matInput
       type="text"
       formControlName="name"
+    >
+    <mat-error>
+      Required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Subtitle</mat-label>
+    <input
+    matInput
+    type="text"
+    formControlName="subtitle"
     >
     <mat-error>
       Required

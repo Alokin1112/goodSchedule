@@ -2,7 +2,8 @@ import { Subject } from '@modules/schedule-setter-modules/interfaces/subject.int
 
 export interface Schedule {
   id: string;
-  name: string;
+  title: string;
+  subtitle: string;
   color: string;
   subjects?: Subject[];
 }

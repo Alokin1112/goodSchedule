@@ -11,7 +11,8 @@ export class SubjetFormCreatorService {
 
   getSubjectForm(): FormGroup {
     return this.fb.group({
-      name: [null, Validators.required],
+      title: [null, Validators.required],
+      subtitle: [null, Validators.required],
       color: [COLORS.GREEN, Validators.required],
     })
   }
