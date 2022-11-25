@@ -1,8 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ScheduleForm } from '@modules/schedule-setter-modules/interfaces/schedule.interface';
-import { SubjetFormCreatorService } from '@modules/schedule-setter-modules/services/subjet-form-creator.service';
+import { ScheduleForm } from '@pages/schedule-setter/interfaces/schedule.interface';
+import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet-form-creator.service';
+
 
 @Component({
   selector: 'ds-schedule-add-dialog',

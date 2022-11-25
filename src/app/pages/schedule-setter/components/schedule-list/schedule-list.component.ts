@@ -1,5 +1,5 @@
-import { Schedule, ScheduleForm } from '@modules/schedule-setter-modules/interfaces/schedule.interface';
 import { Component } from '@angular/core';
+import { Schedule, ScheduleForm } from '@pages/schedule-setter/interfaces/schedule.interface';
 
 @Component({
   selector: 'ds-schedule-list',

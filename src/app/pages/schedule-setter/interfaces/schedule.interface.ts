@@ -1,4 +1,4 @@
-import { Subject } from '@modules/schedule-setter-modules/interfaces/subject.interface';
+import { Subject } from "@pages/schedule-setter/interfaces/subject.interface";
 
 export interface Schedule {
   id: string;

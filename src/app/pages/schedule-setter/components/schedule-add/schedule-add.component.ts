@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ScheduleAddDialogComponent } from '@modules/schedule-setter-modules/components/schedule-add-dialog/schedule-add-dialog.component';
-import { ScheduleForm } from '@modules/schedule-setter-modules/interfaces/schedule.interface';
+import { ScheduleForm } from '@pages/schedule-setter/interfaces/schedule.interface';
 import { filter, Subject, takeUntil } from 'rxjs';
+import { ScheduleAddDialogComponent } from '@pages/schedule-setter/components/schedule-add-dialog/schedule-add-dialog.component';
 
 @Component({
   selector: 'ds-schedule-add',

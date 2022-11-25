@@ -1,5 +1,5 @@
-import { Schedule } from '@modules/schedule-setter-modules/interfaces/schedule.interface';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Schedule } from '@pages/schedule-setter/interfaces/schedule.interface';
 
 @Component({
   selector: 'ds-schedule-item',
