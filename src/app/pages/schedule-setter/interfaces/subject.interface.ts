@@ -7,7 +7,6 @@ export interface Subject {
 }
 
 export interface Lesson {
-  name: string;
   dayIndex: number;
   hourIndex: number;
 }

@@ -14,6 +14,8 @@ import { ScheduleItemComponent } from '@pages/schedule-setter/components/schedul
 import { ScheduleAddComponent } from '@pages/schedule-setter/components/schedule-add/schedule-add.component';
 import { ScheduleAddDialogComponent } from '@pages/schedule-setter/components/schedule-add-dialog/schedule-add-dialog.component';
 import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet-form-creator.service';
+import { LessonsGridComponent } from '@pages/schedule-setter/components/lessons-grid/lessons-grid.component';
+import { LessonsGridService } from '@pages/schedule-setter/services/lessons-grid.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet
     ScheduleListComponent,
     ScheduleItemComponent,
     ScheduleAddComponent,
-    ScheduleAddDialogComponent
+    ScheduleAddDialogComponent,
+    LessonsGridComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet
   ],
   providers: [
     SubjetFormCreatorService,
+    LessonsGridService,
   ]
 })
 export class ScheduleSetterModule { }
