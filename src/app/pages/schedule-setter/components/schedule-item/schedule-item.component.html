@@ -1,6 +1,17 @@
-<ds-card [dsTitle]="dsSchedule.title" [dsSubtitle]="dsSchedule.subtitle">
+<ds-card [dsTitle]="dsSchedule.title" [dsSubtitle]="dsSchedule.subtitle" style="position: relative;">
   <hr
     class="line"
     [ngStyle]="{borderColor: dsSchedule.color}"
   >
+  <button
+    class="delete__button"
+    style="position: absolute; top: 0; right: 0;"
+    mat-button
+    (click)="deleteSchedule()"
+    >
+      <mat-icon class="delete__icon">
+        delete
+      </mat-icon>
+    </button>
 </ds-card>
+
