@@ -11,9 +11,14 @@ export class ScheduleListComponent {
   schedules: Schedule[] = [];
 
   addNewSchedule(schedule: ScheduleForm) {
-    this.schedules.push(schedule);
+    this.schedules = [
+      ...this.schedules,
+      schedule
+    ]
   }
   deleteSchedule(index: number) {
-    this.schedules.filter((item, ind) => index !== ind);
+    this.schedules = [
+      ...this.schedules.filter((item, ind) => index !== ind)
+    ]
   }
 }
