@@ -1,3 +1,13 @@
 .line {
   border: 2px solid grey;
 }
+
+.card {
+  position: relative;
+}
+
+.delete__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
