@@ -15,6 +15,7 @@ import { ScheduleAddComponent } from '@pages/schedule-setter/components/schedule
 import { ScheduleAddDialogComponent } from '@pages/schedule-setter/components/schedule-add-dialog/schedule-add-dialog.component';
 import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet-form-creator.service';
 import { ScheduleDeleteDialogComponent } from './components/schedule-delete-dialog/schedule-delete-dialog.component';
+import { ScheduleChangeDialogComponent } from './components/schedule-change-dialog/schedule-change-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ScheduleDeleteDialogComponent } from './components/schedule-delete-dial
     ScheduleItemComponent,
     ScheduleAddComponent,
     ScheduleAddDialogComponent,
-    ScheduleDeleteDialogComponent
+    ScheduleDeleteDialogComponent,
+    ScheduleChangeDialogComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ScheduleForm } from '@pages/schedule-setter/interfaces/schedule.interface';
@@ -6,22 +6,24 @@ import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet
 
 
 @Component({
-  selector: 'ds-schedule-add-dialog',
-  templateUrl: './schedule-add-dialog.component.html',
-  styleUrls: ['./schedule-add-dialog.component.scss']
+  selector: 'ds-schedule-change-dialog',
+  templateUrl: './schedule-change-dialog.component.html',
+  styleUrls: ['./schedule-change-dialog.component.scss']
 })
-export class ScheduleAddDialogComponent implements OnInit {
+export class ScheduleChangeDialogComponent implements OnInit {
+
+  @Input() color: string;
 
   form: FormGroup;
 
   constructor(
-    public dialogRef: MatDialogRef<ScheduleAddDialogComponent>,
+    public dialogRef: MatDialogRef<ScheduleChangeDialogComponent>,
     private subjetFormCreatorService: SubjetFormCreatorService,
     @Inject(MAT_DIALOG_DATA) private dataForm: ScheduleForm,
   ) { }
 
   ngOnInit(): void {
-    this.form = this.subjetFormCreatorService.getSubjectForm(true);
+    this.form = this.subjetFormCreatorService.getSubjectForm(false, null);
     this.form.patchValue(this.dataForm);
   }
 
@@ -34,5 +36,4 @@ export class ScheduleAddDialogComponent implements OnInit {
   onCancelClose() {
     this.dialogRef.close(null);
   }
-
 }

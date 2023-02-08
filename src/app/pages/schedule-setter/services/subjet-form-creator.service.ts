@@ -9,11 +9,18 @@ export class SubjetFormCreatorService {
     private fb: FormBuilder,
   ) { }
 
-  getSubjectForm(): FormGroup {
+  getSubjectForm(change: boolean, color2 ?: string | null): FormGroup {
+    if (change){
+      return this.fb.group({
+        title: [null, Validators.required],
+        subtitle: [null, Validators.required],
+        color: [COLORS.GREEN, Validators.required],
+      })
+    }
     return this.fb.group({
-      title: [null, Validators.required],
-      subtitle: [null, Validators.required],
-      color: [COLORS.GREEN, Validators.required],
+      title: [null],
+      subtitle: [null],
+      color: [color2],
     })
   }
 }
