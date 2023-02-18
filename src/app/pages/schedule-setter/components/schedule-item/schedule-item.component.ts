@@ -37,10 +37,11 @@ export class ScheduleItemComponent implements OnDestroy {
     ).subscribe(() => this.dsDeleteSchedule.emit(this.dsSchedule));
   }
 
-  changeSchedule(){
+  changeSchedule(color : string){
     const dialogRef = this.dialog.open(ScheduleChangeDialogComponent, {
       minWidth: '400px'
     });
+    dialogRef.componentInstance.color = color;
 
     dialogRef.afterClosed().pipe(
       filter((res) => !!res),

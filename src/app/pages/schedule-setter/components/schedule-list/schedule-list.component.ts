@@ -26,6 +26,6 @@ export class ScheduleListComponent {
   changeSchedule(schedule: ScheduleForm, index: number) {
     schedule.title != null ? this.schedules[index].title = schedule.title : this.schedules[index].title
     schedule.subtitle != null ? this.schedules[index].subtitle = schedule.subtitle : this.schedules[index].subtitle
-    schedule.color != null ? this.schedules[index].color = schedule.color : this.schedules[index].color
+    schedule.color != this.schedules[index].color ? this.schedules[index].color = schedule.color : this.schedules[index].color
   }
 }

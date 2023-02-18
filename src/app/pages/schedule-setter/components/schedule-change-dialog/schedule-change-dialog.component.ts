@@ -23,7 +23,7 @@ export class ScheduleChangeDialogComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.form = this.subjetFormCreatorService.getSubjectForm(false, null);
+    this.form = this.subjetFormCreatorService.getSubjectForm(false, this.color);
     this.form.patchValue(this.dataForm);
   }
 
