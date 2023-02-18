@@ -14,8 +14,8 @@ import { ScheduleItemComponent } from '@pages/schedule-setter/components/schedul
 import { ScheduleAddComponent } from '@pages/schedule-setter/components/schedule-add/schedule-add.component';
 import { ScheduleAddDialogComponent } from '@pages/schedule-setter/components/schedule-add-dialog/schedule-add-dialog.component';
 import { SubjetFormCreatorService } from '@pages/schedule-setter/services/subjet-form-creator.service';
-import { ScheduleDeleteDialogComponent } from './components/schedule-delete-dialog/schedule-delete-dialog.component';
-import { ScheduleChangeDialogComponent } from './components/schedule-change-dialog/schedule-change-dialog.component';
+import { ScheduleDeleteDialogComponent } from '@pages/schedule-setter/components/schedule-delete-dialog/schedule-delete-dialog.component';
+import { ScheduleChangeDialogComponent } from '@pages/schedule-setter/components/schedule-change-dialog/schedule-change-dialog.component';
 
 @NgModule({
   declarations: [
