@@ -1,5 +1,5 @@
 <h2 mat-dialog-title>
-  Add Subject
+  {{isEdit? 'Edit' : 'Add'}} Subject
 </h2>
 <form
   [formGroup]="form"
@@ -56,10 +56,10 @@
       type="submit"
       mat-button
       color="primary"
-      [disabled]="form.invalid"
+      [disabled]="(isSame$ | async) || form.invalid"
       (click)="onAddClose()"
     >
-      Submit
+      {{isEdit? 'Update' : 'Save'}}
     </button>
   </mat-dialog-actions>
 </form>

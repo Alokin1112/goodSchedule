@@ -9,3 +9,7 @@ export interface Schedule {
 }
 
 export type ScheduleForm = Omit<Schedule, "subjects">
+
+export interface ScheduleDialogData extends Omit<Schedule, "subjects"> {
+  isEdit: boolean;
+}

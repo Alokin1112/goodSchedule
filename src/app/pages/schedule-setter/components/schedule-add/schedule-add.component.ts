@@ -24,7 +24,7 @@ export class ScheduleAddComponent implements OnDestroy {
 
   openDialog() {
     const dialogRef = this.dialog.open(ScheduleAddDialogComponent, {
-      minWidth: '400px'
+      minWidth: '400px',
     });
 
     dialogRef.afterClosed().pipe(
