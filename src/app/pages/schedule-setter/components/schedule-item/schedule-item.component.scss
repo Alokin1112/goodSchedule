@@ -13,7 +13,12 @@
 }
 
 .change__button {
-  border: 1px solid black;
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  color:"accent";
+  margin-right: 2%;
+  margin-bottom: 2%;
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 14px;
 }
