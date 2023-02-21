@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ScheduleForm } from '@pages/schedule-setter/interfaces/schedule.interface';
 import { filter, Subject, takeUntil } from 'rxjs';
 import { ScheduleDeleteDialogComponent } from '@pages/schedule-setter/components/schedule-delete-dialog/schedule-delete-dialog.component';
-import { ScheduleChangeDialogComponent } from '@pages/schedule-setter/components/schedule-change-dialog/schedule-change-dialog.component';
+import { ScheduleAddDialogComponent } from '@pages/schedule-setter/components/schedule-add-dialog/schedule-add-dialog.component';
 
 @Component({
   selector: 'ds-schedule-item',
@@ -37,11 +37,14 @@ export class ScheduleItemComponent implements OnDestroy {
     ).subscribe(() => this.dsDeleteSchedule.emit(this.dsSchedule));
   }
 
-  changeSchedule(color : string){
-    const dialogRef = this.dialog.open(ScheduleChangeDialogComponent, {
-      minWidth: '400px'
+  changeSchedule() {
+    const dialogRef = this.dialog.open(ScheduleAddDialogComponent, {
+      minWidth: '400px',
+      data: {
+        ...this.dsSchedule,
+        isEdit: true,
+      }
     });
-    dialogRef.componentInstance.color = color;
 
     dialogRef.afterClosed().pipe(
       filter((res) => !!res),
